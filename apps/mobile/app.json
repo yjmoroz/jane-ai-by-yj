@@ -24,8 +24,7 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false,
-      "permissions": ["android.permission.RECORD_AUDIO"]
+      "predictiveBackGestureEnabled": false
     },
     "web": {
       "output": "static",
@@ -55,6 +54,19 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "e95b61eb-6b89-4d89-b28e-a87a98f2ab5f"
+      }
+    },
+    "owner": "pads_vowels6g",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/e95b61eb-6b89-4d89-b28e-a87a98f2ab5f"
     }
   }
 }

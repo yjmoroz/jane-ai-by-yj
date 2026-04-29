@@ -20,4 +20,11 @@ config.resolver.nodeModulesPaths = [
 // @react-native/virtualized-lists) under its own nested node_modules and
 // disabling hierarchical lookup hides them.
 
+// expo-sqlite ships a wa-sqlite.wasm asset for the web target. Metro doesn't
+// treat .wasm as an asset by default, so bundling for web fails on import
+// resolution. Including it here is a no-op on native.
+if (!config.resolver.assetExts.includes("wasm")) {
+  config.resolver.assetExts.push("wasm");
+}
+
 module.exports = config;
