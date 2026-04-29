@@ -12,7 +12,11 @@ A focused take-home built to demonstrate the technical surface area Jane AI's St
 
 **Open the deployed app in Expo Go:**
 
-`<image: media/qr.png — Expo Go QR>` *(see `docs/SHARING.md` to publish a preview channel and regenerate this QR)*
+<p align="center">
+  <img src="./media/qr.svg" alt="Scan with Expo Go to launch Jane AI by YJ" width="240" />
+</p>
+
+(Need Expo Go? [iOS](https://apps.apple.com/app/expo-go/id982107779) · [Android](https://play.google.com/store/apps/details?id=host.exp.exponent))
 
 **Backend:** [https://jane-ai-by-yj.y8k7yp9w7h.workers.dev](https://jane-ai-by-yj.y8k7yp9w7h.workers.dev) (`/health` is open)
 
