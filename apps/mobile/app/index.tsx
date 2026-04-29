@@ -5,6 +5,7 @@ import { useRecorder } from "@/src/audio/recorder";
 import { LatencyBadges } from "@/src/components/LatencyBadges";
 import { RecentList } from "@/src/components/RecentList";
 import { RecordButton } from "@/src/components/RecordButton";
+import { SamplePrompt } from "@/src/components/SamplePrompt";
 import { rowToTimings } from "@/src/observability/rowToTimings";
 import { decode, enqueue } from "@/src/storage/queue";
 import { useRecordingRow } from "@/src/storage/useRecordingRow";
@@ -40,12 +41,17 @@ export default function Home() {
   };
 
   const decoded = activeRow ? decode(activeRow) : null;
+  // Show the sample prompt when nothing is in flight and the user hasn't
+  // recorded yet — ideal moment to guide them without getting in the way.
+  const showSample = !activeId && recorder.state === "idle";
 
   return (
     <SafeAreaView style={styles.safe}>
       <ScrollView contentContainerStyle={styles.container}>
         <Text style={styles.title}>Jane AI by YJ</Text>
         <Text style={styles.subtitle}>Tap, talk, get a SOAP note.</Text>
+
+        {showSample && <SamplePrompt />}
 
         <View style={styles.buttonArea}>
           <RecordButton
