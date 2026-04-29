@@ -1,0 +1,11 @@
+{
+  "name": "jane-ai-by-yj",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "mobile": "npm start --workspace=mobile",
+    "worker": "npm run dev --workspace=worker"
+  }
+}

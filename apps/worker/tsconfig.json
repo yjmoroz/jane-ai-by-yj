@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "target": "ES2022",
+    "lib": ["ES2022", "WebWorker"],
+    "types": ["./worker-configuration.d.ts"],
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@jane-ai-by-yj/shared": ["../../packages/shared/src/index.ts"],
+      "@jane-ai-by-yj/shared/*": ["../../packages/shared/src/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "worker-configuration.d.ts", "../../packages/shared/src/**/*.ts"]
+}
